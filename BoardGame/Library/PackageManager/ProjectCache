@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638027652353336809
-    m_Hash: 1685501015
+      ticks: 638029435643782474
+    m_Hash: 2323399169
   m_LockFileStatus:
     m_FilePath: C:/Users/npfan/Documents/GitHub/BoardGame/BoardGame/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638027652353386678
-    m_Hash: 4006130944
+      ticks: 638029435643792477
+    m_Hash: 1267622539
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -1377,10 +1377,12 @@ m_ResolvedPackages:
     - 3.0.2
     - 3.1.1
     - 3.2.1
+    - 3.2.2-pre.1
     compatible:
     - 3.0.2
     - 3.1.1
     - 3.2.1
+    - 3.2.2-pre.1
     verified: 3.0.2
   dependencies:
   - name: com.unity.xr.management
