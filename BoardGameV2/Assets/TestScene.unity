@@ -377,5 +377,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Board
       objectReference: {fileID: 0}
+    - target: {fileID: 2409979965076238161, guid: 15b8ee38f93d0c042a72e50dea7336aa, type: 3}
+      propertyPath: sceneViewId
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15b8ee38f93d0c042a72e50dea7336aa, type: 3}
