@@ -19,7 +19,7 @@ MonoBehaviour:
     AppIdVoice: 7eee1ba9-769b-43a0-b257-6db12cb4e199
     AppVersion: 
     UseNameServer: 1
-    FixedRegion: 
+    FixedRegion: us
     Server: 
     Port: 0
     ProxyServer: 
