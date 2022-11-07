@@ -1188,7 +1188,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5105967770613379073, guid: b93a77997e12cb14297c5eae93339bbc, type: 3}
       propertyPath: sceneViewId
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5105967770613379073, guid: b93a77997e12cb14297c5eae93339bbc, type: 3}
       propertyPath: viewIdField
@@ -2996,7 +2996,7 @@ MonoBehaviour:
   OwnershipTransfer: 0
   observableSearch: 2
   ObservedComponents: []
-  sceneViewId: 2
+  sceneViewId: 4
   InstantiationId: 0
   isRuntimeInstantiated: 0
 --- !u!1 &1367576411

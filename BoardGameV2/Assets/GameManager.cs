@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public VideoPlayer videoPlayer;
     public GameObject enviroment;
+    public GameObject button1;
 
     void Start()
     {
@@ -16,9 +17,18 @@ public class GameManager : MonoBehaviour
     {
         enviroment.SetActive(false);
         videoPlayer.url = url;
-    }    
+    }
 
-    void EnableEnviroment(VideoPlayer vp)
+    public void videoSelect()
+    {
+        button1.SetActive(true);
+    }
+    public void videoDeselect()
+    {
+        button1.SetActive(false);
+    }
+
+       void EnableEnviroment(VideoPlayer vp)
     {
         enviroment.SetActive(true);
     }
