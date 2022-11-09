@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Video;
 using UnityEngine.UI;
 
+
 public class GameManager : MonoBehaviour
 {
     public VideoPlayer videoPlayer;
@@ -11,6 +12,8 @@ public class GameManager : MonoBehaviour
     public GameObject button;
     public Canvas c1;
     VideoClipContainer v1;
+    [SerializeField] Material mat;
+    [SerializeField] Material mat2;
 
     void Start()
     {
@@ -19,6 +22,7 @@ public class GameManager : MonoBehaviour
     public void PlayVideo(VideoClip vid)
     {
         enviroment.SetActive(false);
+        RenderSettings.skybox = mat2;
         videoPlayer.clip = vid;
         Debug.Log("Video Playing");
     }
@@ -35,5 +39,6 @@ public class GameManager : MonoBehaviour
        void EnableEnviroment(VideoPlayer vp)
     {
         enviroment.SetActive(true);
+        RenderSettings.skybox = mat;
     }
 }
