@@ -28,7 +28,6 @@ public class GameManager : MonoBehaviourPun
             vid = video;
             enviroment.SetActive(false);
             photonView.RPC("runVideo", RpcTarget.All);
-            //runVideo(vid);
         }
     }
 
@@ -44,6 +43,7 @@ public class GameManager : MonoBehaviourPun
     void EnableEnviroment(VideoPlayer vp)
     {
         enviroment.SetActive(true);
+        RenderSettings.skybox = mat;
     }
 
     [PunRPC]
@@ -51,7 +51,6 @@ public class GameManager : MonoBehaviourPun
     {
         RenderSettings.skybox = mat2;
         videoPlayer.clip = vid;
-        Debug.Log("Video Playing");
     }
 
 }
