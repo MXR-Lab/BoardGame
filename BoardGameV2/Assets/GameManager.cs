@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
 using UnityEngine.UI;
+using Photon.Pun;
 
-
-public class GameManager : MonoBehaviour
+public class GameManager : MonoBehaviourPun
 {
     public VideoPlayer videoPlayer;
     public GameObject enviroment;
@@ -14,17 +14,22 @@ public class GameManager : MonoBehaviour
     VideoClipContainer v1;
     [SerializeField] Material mat;
     [SerializeField] Material mat2;
+    private VideoClip vid;
 
     void Start()
     {
         videoPlayer.loopPointReached += EnableEnviroment;
     }
-    public void PlayVideo(VideoClip vid)
+
+    public void PlayVideo(VideoClip video)
     {
-        enviroment.SetActive(false);
-        RenderSettings.skybox = mat2;
-        videoPlayer.clip = vid;
-        Debug.Log("Video Playing");
+        if (photonView.IsMine)
+        {
+            vid = video;
+            enviroment.SetActive(false);
+            photonView.RPC("runVideo", RpcTarget.All);
+            //runVideo(vid);
+        }
     }
 
     public void videoSelect()
@@ -36,9 +41,18 @@ public class GameManager : MonoBehaviour
         button.SetActive(false);
     }
 
-       void EnableEnviroment(VideoPlayer vp)
+    void EnableEnviroment(VideoPlayer vp)
     {
         enviroment.SetActive(true);
-        RenderSettings.skybox = mat;
     }
+
+    [PunRPC]
+    void runVideo()
+    {
+        RenderSettings.skybox = mat2;
+        videoPlayer.clip = vid;
+        Debug.Log("Video Playing");
+    }
+
 }
+
