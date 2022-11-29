@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviourPun
     public void PlayVideo(VideoClip video)
     {
             vid = video;
+            PhotonView photonView = PhotonView.Get(this);
             photonView.RPC("runVideo", RpcTarget.All);
     }
 
