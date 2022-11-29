@@ -4662,6 +4662,7 @@ MonoBehaviour:
   c1: {fileID: 968075391}
   mat: {fileID: 2100000, guid: 57988f2abb6533543939326b273be57c, type: 2}
   mat2: {fileID: 2100000, guid: ecd7f2241067fcb44b23add7401a551a, type: 2}
+  vid: {fileID: 32900000, guid: a4a8f56e5f3f3754199bf0194b4605f5, type: 3}
 --- !u!114 &456272790941969747
 MonoBehaviour:
   m_ObjectHideFlags: 0

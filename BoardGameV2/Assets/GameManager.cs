@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviourPun
     VideoClipContainer v1;
     [SerializeField] Material mat;
     [SerializeField] Material mat2;
-    private VideoClip vid;
+    public VideoClip vid;
 
     void Start()
     {
@@ -46,11 +46,13 @@ public class GameManager : MonoBehaviourPun
     }
 
     [PunRPC]
-    void runVideo()
+    void runVideo(VideoClip video)
     {
+        //vid = video;
         enviroment.SetActive(false);
         RenderSettings.skybox = mat2;
         videoPlayer.clip = vid;
+        videoPlayer.Play();
     }
 
 }
