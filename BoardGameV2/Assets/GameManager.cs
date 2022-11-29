@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviourPun
     }
 
     [PunRPC]
-    void runVideo(VideoClip video)
+    void runVideo()
     {
         //vid = video;
         enviroment.SetActive(false);
