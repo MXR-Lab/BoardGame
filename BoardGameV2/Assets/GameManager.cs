@@ -23,11 +23,8 @@ public class GameManager : MonoBehaviourPun
 
     public void PlayVideo(VideoClip video)
     {
-        if (photonView.IsMine)
-        {
             vid = video;
             photonView.RPC("runVideo", RpcTarget.All);
-        }
     }
 
     public void videoSelect()
